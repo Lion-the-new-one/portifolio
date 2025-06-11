@@ -35,7 +35,7 @@ formContato.addEventListener('submit', function(event) {
     }
 });
 
-// Scroll animation for fade-in effect
+// Animação de fade-in ao rolar a página
 const fadeElements = document.querySelectorAll('.fade-in');
 
 const checkFade = () => {
