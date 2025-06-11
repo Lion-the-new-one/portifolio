@@ -3,26 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Cadastro</title>
+    <title>Meu Portfólio - Primeiro Período</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="genericconatiner">
-        <div class="container">
-            <h1>Formulário de Cadastro</h1>
-            <form>
-                <div>
-                    <label for="inptNome">Nome:</label>
-                    <input type="text" id="inptNome" name="nome" placeholder="Digite seu usuário">
-                </div>
-                <div>
-                    <label for="inptSenha">Idade:</label>
-                    <input type="number" id="inptSenha" name="idade" placeholder="Digite sua senha">
-                </div>
-                <button type="submit" id="btnSalvar">Salvar</button>
-            </form>
+    <header class="fade-in">
+        <h1>Meu Portfólio</h1>
+        <p>Projetos e Conquistas do Primeiro Período de Faculdade</p>
+    </header>
+
+    <section id="sobre" class="fade-in">
+        <h2>Sobre Mim</h2>
+        <p>Estudante de [Seu Curso] no primeiro período, apaixonado por tecnologia e aprendizado contínuo. Durante este semestre, desenvolvi projetos que demonstram minhas habilidades em programação, design e resolução de problemas.</p>
+    </section>
+
+    <section id="projetos" class="fade-in">
+        <h2>Projetos</h2>
+        <div class="projeto-card">
+            <h3>Projeto 1: [Nome do Projeto]</h3>
+            <p>Descrição: [Descreva brevemente o projeto, como um sistema web simples ou uma aplicação desenvolvida no período].</p>
+            <p>Tecnologias: [Liste as tecnologias usadas, ex. HTML, CSS, JavaScript].</p>
         </div>
-    </div>
+        <div class="projeto-card">
+            <h3>Projeto 2: [Nome do Projeto]</h3>
+            <p>Descrição: [Descreva outro projeto relevante].</p>
+            <p>Tecnologias: [Liste as tecnologias usadas].</p>
+        </div>
+    </section>
+
+    <section id="habilidades" class="fade-in">
+        <h2>Habilidades</h2>
+        <div class="habilidades-grid">
+            <div class="habilidade-item">HTML</div>
+            <div class="habilidade-item">CSS</div>
+            <div class="habilidade-item">JavaScript</div>
+            <div class="habilidade-item">[Ferramenta, ex. Git]</div>
+        </div>
+    </section>
+
+    <section id="contato" class="fade-in">
+        <h2>Contato</h2>
+        <form id="formContato">
+            <label for="inptNome">Nome:</label>
+            <input type="text" id="inptNome" placeholder="Digite seu nome" required>
+            
+            <label for="inptMensagem">Mensagem:</label>
+            <textarea id="inptMensagem" placeholder="Digite sua mensagem" required></textarea>
+            
+            <button type="submit" id="btnSalvar">Enviar</button>
+        </form>
+        <div id="formFeedback" class="feedback-hidden"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 [Seu Nome]. Todos os direitos reservados.</p>
+    </footer>
+
     <script src="index.js"></script>
 </body>
 </html>
