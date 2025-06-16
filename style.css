@@ -98,6 +98,14 @@ footer {
     backdrop-filter: blur(5px);
 }
 
+#contato {
+    text-align: center;
+}
+
+#contato p {
+    margin: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
