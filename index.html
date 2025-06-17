@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Marco Aurelio</title>
+    <title>Portfólio de Marco Aurélio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="dark-theme">
     <nav class="navbar">
         <div class="nav-logo">Marco Aurélio</div>
         <ul class="nav-links">
@@ -17,9 +17,13 @@
             <li><a href="#habilidades">Habilidades</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
+        <button id="theme-toggle" title="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
     </nav>
 
     <header class="fade-in">
+        <div class="parallax-bg"></div>
         <h1>Meu Portfólio</h1>
         <p>Projetos e Conquistas do Primeiro Período de Ciência da Computação</p>
     </header>
@@ -31,52 +35,65 @@
 
     <section id="projetos" class="fade-in">
         <h2>Projetos</h2>
-        <div class="projeto-card">
-            <h3>Jokenpô</h3>
-            <p>Descrição: Desenvolvi um jogo de Jokenpô em Python, concluído em duas semanas. O projeto inclui três modos: humano contra humano, humano contra IA (usando o módulo random) e IA contra IA. Funções otimizadas reduziram o tempo de desenvolvimento. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
-            <p>Tecnologias: Python</p>
+        <div class="filtro-projetos">
+            <button class="filtro-btn active" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="python">Python</button>
+            <button class="filtro-btn" data-filtro="construct">Construct</button>
+            <button class="filtro-btn" data-filtro="processing">Processing</button>
+            <button class="filtro-btn" data-filtro="html">HTML</button>
+            <button class="filtro-btn" data-filtro="pesquisa">Pesquisa</button>
         </div>
-        <div class="projeto-card">
-            <h3>Aliens Revenge</h3>
-            <p>Descrição: Em um grupo de cinco pessoas, criamos o jogo Aliens Revenge no Construct, aprendendo a ferramenta do zero. O desafio foi trabalhar com um limite de 38 eventos, exigindo planejamento eficiente. <a href="https://www.construct.net/en/free-online-games/aliens-revenge-75575/play" target="_blank" class="projeto-link">Jogue agora!</a></p>
-            <p>Tecnologias: Construct</p>
-        </div>
-        <div class="projeto-card">
-            <h3>Horta +</h3>
-            <p>Descrição: Desenvolvi um aplicativo em Processing chamado Horta +, para auxiliar no cultivo de hortas caseiras. Oferece uma interface interativa com orientações sobre plantio, rega e cuidados com plantas.</p>
-            <p>Tecnologias: Processing</p>
-        </div>
-        <div class="projeto-card">
-            <h3>Entrevista sobre Inteligência Artificial</h3>
-            <p>Descrição: Entrevistei Rafael Perin para a matéria de Filosofia, discutindo o impacto da IA para programadores, abordando questões éticas, técnicas e sociais. <a href="https://youtu.be/TpHms9wi00g" target="_blank" class="projeto-link">Assista à entrevista!</a></p>
-            <p>Tecnologias: Pesquisa, Entrevista, Edição de Vídeo</p>
-        </div>
-        <div class="projeto-card">
-            <h3>Seminário sobre o Sistema Operacional Solaris</h3>
-            <p>Descrição: Apresentei um seminário para Fundamentos de Sistemas Ciberfísicos, explicando as funcionalidades do Solaris, como gerenciamento de recursos e ZFS. <a href="https://youtu.be/_NsWGDw_qts?si=YLIeFiXpRSbeyo2a" target="_blank" class="projeto-link">Assista ao seminário!</a></p>
-            <p>Tecnologias: Pesquisa, Apresentação, Edição de Vídeo</p>
-        </div>
-        <div class="projeto-card">
-            <h3>Máquina de Vendas</h3>
-            <p>Descrição: Desenvolvi uma máquina de vendas em Python com interface gráfica em Tkinter, incluindo modos cliente e administrador, compra de produtos (Coca-Cola, Pepsi, Monster, etc.), gerenciamento de estoque e troco. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
-            <p>Tecnologias: Python, Tkinter</p>
-        </div>
-        <div class="projeto-card">
-            <h3>Projeto Web: Conscientização de Carbono</h3>
-            <p>Descrição: Desenvolvi um site para conscientizar sobre emissões de carbono. O usuário interage com uma árvore inicial, seleciona meios de transporte (ônibus, carro, moto, avião) e recebe um relatório de impacto ambiental. <a href="https://oi-ina.github.io/MyFistWebApp/" target="_blank" class="projeto-link">Veja o Site!</a></p>
-            <p>Tecnologias: HTML, JavaScript, CSS</p>
+        <div class="projetos-grid">
+            <div class="projeto-card" data-tecnologia="python" data-tooltip="Clique no link para ver o código!">
+                <h3>Jokenpô</h3>
+                <p>Descrição: Desenvolvi um jogo de Jokenpô em Python, concluído em duas semanas. O projeto inclui três modos: humano contra humano, humano contra IA (usando o módulo random) e IA contra IA. Funções otimizadas reduziram o tempo de desenvolvimento. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
+                <p>Tecnologias: Python</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="construct" data-tooltip="Jogue agora online!">
+                <h3>Aliens Revenge</h3>
+                <p>Descrição: Em um grupo de cinco pessoas, criamos o jogo Aliens Revenge no Construct, aprendendo a ferramenta do zero. O desafio foi trabalhar com um limite de 38 eventos, exigindo planejamento eficiente. <a href="https://www.construct.net/en/free-online-games/aliens-revenge-75575/play" target="_blank" class="projeto-link">Jogue agora!</a></p>
+                <p>Tecnologias: Construct</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="processing" data-tooltip="Aplicativo para agricultura urbana">
+                <h3>Horta +</h3>
+                <p>Descrição: Desenvolvi um aplicativo em Processing chamado Horta +, para auxiliar no cultivo de hortas caseiras. Oferece uma interface interativa com orientações sobre plantio, rega e cuidados com plantas.</p>
+                <p>Tecnologias: Processing</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Assista à discussão sobre IA!">
+                <h3>Entrevista sobre Inteligência Artificial</h3>
+                <p>Descrição: Entrevistei Rafael Perin para a matéria de Filosofia, discutindo o impacto da IA para programadores, abordando questões éticas, técnicas e sociais. <a href="https://youtu.be/TpHms9wi00g" target="_blank" class="projeto-link">Assista à entrevista!</a></p>
+                <p>Tecnologias: Pesquisa, Entrevista, Edição de Vídeo</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Conheça o Solaris!">
+                <h3>Seminário sobre o Sistema Operacional Solaris</h3>
+                <p>Descrição: Apresentei um seminário para Fundamentos de Sistemas Ciberfísicos, explicando as funcionalidades do Solaris, como gerenciamento de recursos e ZFS. <a href="https://youtu.be/_NsWGDw_qts?si=YLIeFiXpRSbeyo2a" target="_blank" class="projeto-link">Assista ao seminário!</a></p>
+                <p>Tecnologias: Pesquisa, Apresentação, Edição de Vídeo</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="python" data-tooltip="Clique para ver o código da interface!">
+                <h3>Máquina de Vendas</h3>
+                <p>Descrição: Desenvolvi uma máquina de vendas em Python com interface gráfica em Tkinter, incluindo modos cliente e administrador, compra de produtos (Coca-Cola, Pepsi, Monster, etc.), gerenciamento de estoque e troco. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
+                <p>Tecnologias: Python, Tkinter</p>
+            </div>
+            <div class="projeto-card" data-tecnologia="html" data-tooltip="Explore o site de conscientização!">
+                <h3>Projeto Web: Conscientização de Carbono</h3>
+                <p>Descrição: Desenvolvi um site para conscientizar sobre emissões de carbono. O usuário interage com uma árvore inicial, seleciona meios de transporte (ônibus, carro, moto, avião) e recebe um relatório de impacto ambiental. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
+                <p>Tecnologias: HTML, JavaScript, CSS</p>
+            </div>
         </div>
     </section>
 
     <section id="habilidades" class="fade-in">
         <h2>Habilidades</h2>
         <div class="habilidades-grid">
-            <div class="habilidade-item">HTML</div>
-            <div class="habilidade-item">CSS</div>
-            <div class="habilidade-item">JavaScript</div>
-            <div class="habilidade-item">Python</div>
-            <div class="habilidade-item">Processing</div>
-            <div class="habilidade-item">Construct</div>
+            <div class="habilidade-item" data-tooltip="Usado em Projeto Web">HTML</div>
+            <div class="habilidade-item" data-tooltip="Estilização do portfólio">CSS</div>
+            <div class="habilidade-item" data-tooltip="Interatividade no Projeto Web">JavaScript</div>
+            <div class="habilidade-item" data-tooltip="Jokenpô e Máquina de Vendas">Python</div>
+            <div class="habilidade-item" data-tooltip="Desenvolvimento de Horta +">Processing</div>
+            <div class="habilidade-item" data-tooltip="Jogo Aliens Revenge">Construct</div>
+            <div class="habilidade-item" data-tooltip="Interface da Máquina de Vendas">Tkinter</div>
+            <div class="habilidade-item" data-tooltip="Entrevista sobre IA">Entrevistas/Pesquisa</div>
+            <div class="habilidade-item" data-tooltip="Seminário Solaris">Apresentação/Seminários</div>
         </div>
     </section>
 
@@ -92,6 +109,10 @@
             <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Lion-the-new-one</a></p>
         </div>
     </section>
+
+    <button id="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="index.js"></script>
 </body>
