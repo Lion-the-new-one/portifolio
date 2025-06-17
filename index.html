@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dark-theme">
+    <div id="particles-js"></div>
+    <div id="intro-animation">
+        <h1 class="intro-text">Marco Aurélio</h1>
+    </div>
+
     <nav class="navbar">
         <div class="nav-logo">Marco Aurélio</div>
         <ul class="nav-links">
@@ -56,7 +61,7 @@
             </div>
             <div class="projeto-card" data-tecnologia="processing" data-tooltip="Aplicativo para agricultura urbana">
                 <h3>Horta +</h3>
-                <p>Descrição: Desenvolvi um aplicativo em Processing chamado Horta +, para auxiliar no cultivo de hortas caseiras. Oferece uma interface interativa com orientações sobre plantio, rega e cuidados com plantas.</p>
+                <p>Descrição: Desenvolvi um aplicativo em Processing chamado Horta ENT, para auxiliar no cultivo de hortas caseiras. Oferece uma interface interativa com orientações sobre plantio, rega e cuidados com plantas.</p>
                 <p>Tecnologias: Processing</p>
             </div>
             <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Assista à discussão sobre IA!">
@@ -64,9 +69,9 @@
                 <p>Descrição: Entrevistei Rafael Perin para a matéria de Filosofia, discutindo o impacto da IA para programadores, abordando questões éticas, técnicas e sociais. <a href="https://youtu.be/TpHms9wi00g" target="_blank" class="projeto-link">Assista à entrevista!</a></p>
                 <p>Tecnologias: Pesquisa, Entrevista, Edição de Vídeo</p>
             </div>
-            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Conheça o Solaris!">
-                <h3>Seminário sobre o Sistema Operacional Solaris</h3>
-                <p>Descrição: Apresentei um seminário para Fundamentos de Sistemas Ciberfísicos, explicando as funcionalidades do Solaris, como gerenciamento de recursos e ZFS. <a href="https://youtu.be/_NsWGDw_qts?si=YLIeFiXpRSbeyo2a" target="_blank" class="projeto-link">Assista ao seminário!</a></p>
+            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Conheça o Florença!">
+                <h3>Seminário sobre o Sistema Operacional Florença</h3>
+                <p>Descrição: Apresentei um seminário para Fundamentos de Sistemas Ciberfísicos, explicando as funcionalidades do Florença, como gerenciamento de recursos e ZFS. <a href="https://youtu.be/_NsWGDw_qts?si=YLIeFiXpRSbeyo2a" target="_blank" class="projeto-link">Assista ao seminário!</a></p>
                 <p>Tecnologias: Pesquisa, Apresentação, Edição de Vídeo</p>
             </div>
             <div class="projeto-card" data-tecnologia="python" data-tooltip="Clique para ver o código da interface!">
@@ -76,7 +81,7 @@
             </div>
             <div class="projeto-card" data-tecnologia="html" data-tooltip="Explore o site de conscientização!">
                 <h3>Projeto Web: Conscientização de Carbono</h3>
-                <p>Descrição: Desenvolvi um site para conscientizar sobre emissões de carbono. O usuário interage com uma árvore inicial, seleciona meios de transporte (ônibus, carro, moto, avião) e recebe um relatório de impacto ambiental. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
+                <p>Descrição: Desenvolvi um site para conscientizar sobre emissões de carbono. O usuário interage com uma árvore inicial, seleciona meios de transporte (ônibus, carro, moto, avião) e recebe um relatório de impacto ambiental. <a href="https://oi-ina.github.io/MyFistWebApp/" target="_blank" class="projeto-link">Veja o Site!</a></p>
                 <p>Tecnologias: HTML, JavaScript, CSS</p>
             </div>
         </div>
@@ -84,13 +89,31 @@
 
     <section id="habilidades" class="fade-in">
         <h2>Habilidades</h2>
-        <div class="habilidades-grid">
-            <div class="habilidade-item" data-tooltip="Usado em Projeto Web">HTML</div>
-            <div class="habilidade-item" data-tooltip="Estilização do portfólio">CSS</div>
-            <div class="habilidade-item" data-tooltip="Interatividade no Projeto Web">JavaScript</div>
-            <div class="habilidade-item" data-tooltip="Jokenpô e Máquina de Vendas">Python</div>
-            <div class="habilidade-item" data-tooltip="Desenvolvimento de Horta +">Processing</div>
-            <div class="habilidade-item" data-tooltip="Jogo Aliens Revenge">Construct</div>
+        <div class="timeline">
+            <div class="timeline-item" data-skill="python">
+                <h3>Python</h3>
+                <p>Aprendido em 2025 para desenvolver Jokenpô e Máquina de Vendas, com foco em lógica de programação e interfaces gráficas com Tkinter.</p>
+            </div>
+            <div class="timeline-item" data-skill="html">
+                <h3>HTML</h3>
+                <p>Aprendido em 2025 para criar a estrutura do Projeto Web: Conscientização de Carbono, com ênfase em semântica e acessibilidade.</p>
+            </div>
+            <div class="timeline-item" data-skill="css">
+                <h3>CSS</h3>
+                <p>Aprendido em 2025 para estilizar o Projeto Web, aplicando layouts responsivos e animações visuais.</p>
+            </div>
+            <div class="timeline-item" data-skill="javascript">
+                <h3>JavaScript</h3>
+                <p>Aprendido em 2025 para adicionar interatividade ao Projeto Web, como cálculos de emissões de carbono.</p>
+            </div>
+            <div class="timeline-item" data-skill="processing">
+                <h3>Processing</h3>
+                <p>Aprendido em 2025 para criar o aplicativo Horta ENT, com interfaces gráficas para agricultura urbana.</p>
+            </div>
+            <div class="timeline-item" data-skill="construct">
+                <h3>Construct</h3>
+                <p>Aprendido em 2025 para desenvolver o jogo Aliens Revenge, explorando design de jogos com eventos limitados.</p>
+            </div>
         </div>
     </section>
 
@@ -111,6 +134,7 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="index.js"></script>
 </body>
 </html>
