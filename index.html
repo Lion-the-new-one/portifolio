@@ -3,134 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio de Marco Aurelio</title>
+    <title>Portfólio | Marco Aurelio Brandão Avanci</title>
+    <meta name="description" content="Portfólio de Marco Aurelio Brandão Avanci, estudante de Ciência da Computação na PUCPR, com projetos em desenvolvimento web, Python, Java e segurança da informação.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body class="dark-theme">
-    <div id="particles-js"></div>
+    <div id="particles-js" aria-hidden="true"></div>
+
     <div id="intro-animation">
         <h1 class="intro-text">Marco Aurelio</h1>
     </div>
 
-    <nav class="navbar">
-        <div class="nav-logo">Marco Aurélio</div>
+    <nav class="navbar" aria-label="Navegação principal">
+        <a class="nav-logo" href="#inicio">Marco Aurelio</a>
+
         <ul class="nav-links">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#jornada">Jornada</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
-        <button id="theme-toggle" title="Alternar tema">
+
+        <button id="theme-toggle" title="Alternar tema" aria-label="Alternar tema claro e escuro">
             <i class="fas fa-moon"></i>
         </button>
     </nav>
 
-    <header class="fade-in">
+    <header id="inicio" class="hero fade-in">
         <div class="parallax-bg"></div>
-        <h1>Meu Portfólio</h1>
-        <p>Projetos e Conquistas do Primeiro Período de Ciência da Computação</p>
+
+        <p class="eyebrow">Ciência da Computação • PUCPR</p>
+        <h1>Desenvolvendo soluções com código, segurança e criatividade.</h1>
+        <p class="hero-description">
+            Sou Marco Aurelio Brandão Avanci, estudante de Ciência da Computação com foco em desenvolvimento web,
+            Python, Java, banco de dados, segurança da informação e projetos práticos.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#projetos" class="btn primary-btn">Ver projetos</a>
+            <a href="https://github.com/Lion-the-new-one" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+
+        <div class="quick-stats" aria-label="Resumo rápido">
+            <div class="stat-card">
+                <strong>2026</strong>
+                <span>Portfólio atualizado</span>
+            </div>
+            <div class="stat-card">
+                <strong>8+</strong>
+                <span>Tecnologias estudadas</span>
+            </div>
+            <div class="stat-card">
+                <strong>3º</strong>
+                <span>Período em andamento</span>
+            </div>
+        </div>
     </header>
 
-    <section id="sobre" class="fade-in">
-        <h2>Sobre Mim</h2>
-        <p>Meu nome é Marco Aurelio Brandão Avanci, estudante de Ciência da Computação no primeiro período, apaixonado por tecnologia e aprendizado contínuo. Durante este semestre, desenvolvi projetos que integram programação e soluções práticas, como jogos, interfaces gráficas interativas, aplicativos para agricultura urbana, pesquisas interdisciplinares, apresentações sobre sistemas operacionais e conscientização ambiental.</p>
-    </section>
+    <main>
+        <section id="sobre" class="fade-in">
+            <div class="section-heading">
+                <p class="section-kicker">Sobre mim</p>
+                <h2>Perfil</h2>
+            </div>
 
-    <section id="projetos" class="fade-in">
-        <h2>Projetos</h2>
-        <div class="filtro-projetos">
-            <button class="filtro-btn active" data-filtro="todos">Todos</button>
-            <button class="filtro-btn" data-filtro="python">Python</button>
-            <button class="filtro-btn" data-filtro="construct">Construct</button>
-            <button class="filtro-btn" data-filtro="processing">Processing</button>
-            <button class="filtro-btn" data-filtro="html">HTML</button>
-            <button class="filtro-btn" data-filtro="pesquisa">Pesquisa</button>
-        </div>
-        <div class="projetos-grid">
-            <div class="projeto-card" data-tecnologia="python" data-tooltip="Clique no link para ver o código!">
-                <h3>Jokenpô</h3>
-                <p>Descrição: Desenvolvi um jogo de Jokenpô em Python, concluído em duas semanas. O projeto inclui três modos: humano contra humano, humano contra IA (usando o módulo random) e IA contra IA. Funções otimizadas reduziram o tempo de desenvolvimento. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
-                <p>Tecnologias: Python</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="construct" data-tooltip="Jogue agora online!">
-                <h3>Aliens Revenge</h3>
-                <p>Descrição: Em um grupo de cinco pessoas, criamos o jogo Aliens Revenge no Construct, aprendendo a ferramenta do zero. O desafio foi trabalhar com um limite de 38 eventos, exigindo planejamento eficiente. <a href="https://www.construct.net/en/free-online-games/aliens-revenge-75575/play" target="_blank" class="projeto-link">Jogue agora!</a></p>
-                <p>Tecnologias: Construct</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="processing" data-tooltip="Aplicativo para agricultura urbana">
-                <h3>Horta +</h3>
-                <p>Descrição: Desenvolvi um aplicativo em Processing chamado Horta ENT, para auxiliar no cultivo de hortas caseiras. Oferece uma interface interativa com orientações sobre plantio, rega e cuidados com plantas.</p>
-                <p>Tecnologias: Processing</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Assista à discussão sobre IA!">
-                <h3>Entrevista sobre Inteligência Artificial</h3>
-                <p>Descrição: Entrevistei Rafael Perin para a matéria de Filosofia, discutindo o impacto da IA para programadores, abordando questões éticas, técnicas e sociais. <a href="https://youtu.be/TpHms9wi00g" target="_blank" class="projeto-link">Assista à entrevista!</a></p>
-                <p>Tecnologias: Pesquisa, Entrevista, Edição de Vídeo</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="pesquisa" data-tooltip="Conheça o Florença!">
-                <h3>Seminário sobre o Sistema Operacional Florença</h3>
-                <p>Descrição: Apresentei um seminário para Fundamentos de Sistemas Ciberfísicos, explicando as funcionalidades do Florença, como gerenciamento de recursos e ZFS. <a href="https://youtu.be/_NsWGDw_qts?si=YLIeFiXpRSbeyo2a" target="_blank" class="projeto-link">Assista ao seminário!</a></p>
-                <p>Tecnologias: Pesquisa, Apresentação, Edição de Vídeo</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="python" data-tooltip="Clique para ver o código da interface!">
-                <h3>Máquina de Vendas</h3>
-                <p>Descrição: Desenvolvi uma máquina de vendas em Python com interface gráfica em Tkinter, incluindo modos cliente e administrador, compra de produtos (Coca-Cola, Pepsi, Monster, etc.), gerenciamento de estoque e troco. <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Veja no GitHub!</a></p>
-                <p>Tecnologias: Python, Tkinter</p>
-            </div>
-            <div class="projeto-card" data-tecnologia="html" data-tooltip="Explore o site de conscientização!">
-                <h3>Projeto Web: Conscientização de Carbono</h3>
-                <p>Descrição: Desenvolvi um site para conscientizar sobre emissões de carbono. O usuário interage com uma árvore inicial, seleciona meios de transporte (ônibus, carro, moto, avião) e recebe um relatório de impacto ambiental. <a href="https://oi-ina.github.io/MyFistWebApp/" target="_blank" class="projeto-link">Veja o Site!</a></p>
-                <p>Tecnologias: HTML, JavaScript, CSS</p>
-            </div>
-        </div>
-    </section>
+            <div class="about-grid">
+                <div>
+                    <p>
+                        Sou estudante de Ciência da Computação na PUCPR e gosto de transformar ideias em sistemas funcionais.
+                        Tenho praticado desenvolvimento front-end, back-end, lógica de programação, Java, Python, banco de dados
+                        e segurança da informação.
+                    </p>
+                    <p>
+                        Meu objetivo é evoluir como desenvolvedor, criar projetos mais completos e aplicar tecnologia em problemas
+                        reais, desde sistemas web até automações, ferramentas de apoio e aplicações acadêmicas.
+                    </p>
+                </div>
 
-    <section id="habilidades" class="fade-in">
-        <h2>Habilidades</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-skill="python">
-                <h3>Python</h3>
-                <p>Aprendido em 2025 para desenvolver Jokenpô e Máquina de Vendas, com foco em lógica de programação e interfaces gráficas com Tkinter.</p>
+                <div class="about-card">
+                    <h3>Atualmente estudando</h3>
+                    <ul>
+                        <li>Desenvolvimento web com HTML, CSS, JavaScript e Node.js</li>
+                        <li>Programação orientada a objetos com Java</li>
+                        <li>SQLite, autenticação, permissões e APIs</li>
+                        <li>Segurança da informação, vulnerabilidades e boas práticas</li>
+                    </ul>
+                </div>
             </div>
-            <div class="timeline-item" data-skill="html">
-                <h3>HTML</h3>
-                <p>Aprendido em 2025 para criar a estrutura do Projeto Web: Conscientização de Carbono, com ênfase em semântica e acessibilidade.</p>
+        </section>
+
+        <section id="projetos" class="fade-in">
+            <div class="section-heading">
+                <p class="section-kicker">Projetos</p>
+                <h2>Meus principais trabalhos</h2>
             </div>
-            <div class="timeline-item" data-skill="css">
-                <h3>CSS</h3>
-                <p>Aprendido em 2025 para estilizar o Projeto Web, aplicando layouts responsivos e animações visuais.</p>
+
+            <div class="filtro-projetos" aria-label="Filtros de projetos">
+                <button class="filtro-btn active" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="web">Web</button>
+                <button class="filtro-btn" data-filtro="python">Python</button>
+                <button class="filtro-btn" data-filtro="java">Java</button>
+                <button class="filtro-btn" data-filtro="seguranca">Segurança</button>
+                <button class="filtro-btn" data-filtro="jogos">Jogos</button>
+                <button class="filtro-btn" data-filtro="pesquisa">Pesquisa</button>
             </div>
-            <div class="timeline-item" data-skill="javascript">
-                <h3>JavaScript</h3>
-                <p>Aprendido em 2025 para adicionar interatividade ao Projeto Web, como cálculos de emissões de carbono.</p>
+
+            <div class="projetos-grid">
+                <article class="projeto-card destaque" data-tecnologia="web seguranca banco" data-tooltip="Projeto acadêmico completo">
+                    <div class="card-topline">
+                        <span class="project-type">Sistema web</span>
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h3>X-Triagem</h3>
+                    <p>
+                        Sistema de triagem hospitalar desenvolvido em equipe, com cadastro de pacientes, avaliações,
+                        relatórios, autenticação, permissões por perfil e persistência em banco de dados.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>SQLite</span>
+                        <span>JWT</span>
+                    </div>
+                    <a href="https://github.com/gabamaral13/extension-pucpr" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Ver repositório <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="web" data-tooltip="Este site">
+                    <div class="card-topline">
+                        <span class="project-type">Front-end</span>
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Portfólio Pessoal</h3>
+                    <p>
+                        Página pessoal responsiva para organizar projetos, habilidades e contatos, com tema claro/escuro,
+                        animações, filtros por categoria e partículas no fundo.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/Lion-the-new-one/portifolio" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Ver código <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="python" data-tooltip="Interface gráfica em Python">
+                    <div class="card-topline">
+                        <span class="project-type">Aplicação desktop</span>
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Máquina de Vendas</h3>
+                    <p>
+                        Aplicação em Python com interface Tkinter, modo cliente e administrador, controle de estoque,
+                        compra de produtos e cálculo de troco.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>Lógica</span>
+                    </div>
+                    <a href="https://github.com/Lion-the-new-one/maquina-de-vendas" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Ver repositório <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="python jogos" data-tooltip="Primeiro projeto em Python">
+                    <div class="card-topline">
+                        <span class="project-type">Jogo</span>
+                        <i class="fas fa-hand-scissors"></i>
+                    </div>
+                    <h3>Jokenpô</h3>
+                    <p>
+                        Jogo de pedra, papel e tesoura em Python, com modos humano contra humano, humano contra IA
+                        e IA contra IA usando escolhas aleatórias.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Random</span>
+                        <span>Funções</span>
+                    </div>
+                    <a href="https://github.com/Lion-the-new-one/jokenpo" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Ver repositório <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="web" data-tooltip="Projeto para uso familiar">
+                    <div class="card-topline">
+                        <span class="project-type">Organização financeira</span>
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Controle Financeiro Doméstico</h3>
+                    <p>
+                        Protótipo de site local para registrar gastos, acompanhar histórico, visualizar relatórios,
+                        alternar modo escuro e facilitar o controle mensal de finanças.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="web pesquisa" data-tooltip="Projeto de conscientização">
+                    <div class="card-topline">
+                        <span class="project-type">Projeto web</span>
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Conscientização de Carbono</h3>
+                    <p>
+                        Site interativo para conscientizar sobre emissões de carbono, calculando impacto ambiental
+                        a partir de escolhas de transporte.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://oi-ina.github.io/MyFistWebApp/" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Ver site <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="jogos" data-tooltip="Jogo feito no Construct">
+                    <div class="card-topline">
+                        <span class="project-type">Game design</span>
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Aliens Revenge</h3>
+                    <p>
+                        Jogo criado em equipe no Construct, com foco em planejamento, eventos limitados, organização
+                        de mecânicas e entrega jogável online.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Construct</span>
+                        <span>Game Design</span>
+                        <span>Equipe</span>
+                    </div>
+                    <a href="https://www.construct.net/en/free-online-games/aliens-revenge-75575/play" target="_blank" rel="noopener noreferrer" class="projeto-link">
+                        Jogar agora <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="java" data-tooltip="Estudos de concorrência">
+                    <div class="card-topline">
+                        <span class="project-type">Programação</span>
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Exercícios com Threads</h3>
+                    <p>
+                        Estudos e implementações em Java envolvendo múltiplas threads, sincronização, concorrência
+                        e cenários como produtor-consumidor e recursos compartilhados.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>Threads</span>
+                        <span>Sincronização</span>
+                    </div>
+                </article>
+
+                <article class="projeto-card" data-tecnologia="seguranca pesquisa" data-tooltip="Estudos de segurança">
+                    <div class="card-topline">
+                        <span class="project-type">Segurança</span>
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Estudos em Segurança da Informação</h3>
+                    <p>
+                        Resumos, análises e práticas acadêmicas sobre malware, vulnerabilidades, ataques,
+                        detecção de intrusão, criptografia e boas práticas de proteção.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Cybersecurity</span>
+                        <span>Malware</span>
+                        <span>Criptografia</span>
+                    </div>
+                </article>
             </div>
-            <div class="timeline-item" data-skill="processing">
-                <h3>Processing</h3>
-                <p>Aprendido em 2025 para criar o aplicativo Horta ENT, com interfaces gráficas para agricultura urbana.</p>
+        </section>
+
+        <section id="habilidades" class="fade-in">
+            <div class="section-heading">
+                <p class="section-kicker">Habilidades</p>
+                <h2>Ferramentas e conhecimentos</h2>
             </div>
-            <div class="timeline-item" data-skill="construct">
-                <h3>Construct</h3>
-                <p>Aprendido em 2025 para desenvolver o jogo Aliens Revenge, explorando design de jogos com eventos limitados.</p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Front-end</h3>
+                    <p>HTML, CSS, JavaScript, responsividade, animações e organização visual.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Back-end</h3>
+                    <p>Node.js, Express, rotas, autenticação, permissões e estruturação de APIs.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Lógica de programação, scripts, jogos simples e interfaces gráficas com Tkinter.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>POO, exercícios acadêmicos, threads, concorrência e sincronização.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Banco de dados</h3>
+                    <p>SQLite, modelagem simples, consultas e persistência de informações.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Segurança</h3>
+                    <p>Hash, criptografia, vulnerabilidades, malware e boas práticas de proteção.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-github"></i>
+                    <h3>Git e GitHub</h3>
+                    <p>Versionamento, commits, branches, README e publicação de projetos.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Redes e IoT</h3>
+                    <p>Conceitos de redes, dispositivos, MQTT e integração com ESP32.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="jornada" class="fade-in">
+            <div class="section-heading">
+                <p class="section-kicker">Evolução</p>
+                <h2>Minha jornada</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Primeiros projetos</h3>
+                    <p>Comecei com lógica, Python, jogos simples, Processing, Construct e páginas web interativas.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Projetos web mais completos</h3>
+                    <p>Evoluí para sistemas com back-end, banco de dados, autenticação e permissões, como o X-Triagem.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Java, performance e segurança</h3>
+                    <p>Aprofundei estudos em POO, threads, redes, segurança da informação e boas práticas de desenvolvimento.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Próximos passos</h3>
+                    <p>Melhorar meus projetos públicos, criar sistemas mais úteis e fortalecer meu portfólio para oportunidades futuras.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="fade-in">
+            <div class="section-heading center">
+                <p class="section-kicker">Contato</p>
+                <h2>Vamos conversar?</h2>
+            </div>
+
+            <div class="contato-info">
+                <a href="mailto:2104maba@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>E-mail</span>
+                    <strong>2104maba@gmail.com</strong>
+                </a>
+
+                <a href="https://github.com/Lion-the-new-one" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <strong>Lion-the-new-one</strong>
+                </a>
+
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <span>Telefone</span>
+                    <strong>Disponível sob solicitação</strong>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="fade-in">
-        <p>© 2025 Marco Aurélio Brandão Avanci. Todos os direitos reservados.</p>
+        <p>© 2026 Marco Aurelio Brandão Avanci. Todos os direitos reservados.</p>
     </footer>
 
-    <section id="contato" class="fade-in">
-        <h2>Contato</h2>
-        <div class="contato-info">
-            <p><i class="fas fa-phone"></i> Telefone: +55 41 99997-2009</p>
-            <p><i class="fas fa-envelope"></i> E-mail: <a href="mailto:2104maba@gmail.com" class="projeto-link">2104maba@gmail.com</a></p>
-            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Lion-the-new-one" target="_blank" class="projeto-link">Lion-the-new-one</a></p>
-        </div>
-    </section>
-
-    <button id="back-to-top" title="Voltar ao topo">
+    <button id="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up"></i>
     </button>
 
